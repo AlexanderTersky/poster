@@ -1,0 +1,18 @@
+{
+  "name": "wtolk/poster",
+  "description": "PHP Library for generating export for Wtolk Poster microservice",
+  "type": "library",
+  "license": "MIT",
+  "keywords": ["wtolk","webtolk", "poster", "wtolk poster"],
+  "require": {
+    "php": ">=7.2",
+    "ramsey/uuid": "^3.8",
+    "nesbot/carbon": "^2.16"
+  },
+  "autoload": {
+    "psr-4": {
+      "Wtolk\\Poster\\": "src/",
+      "Wtolk\\Poster\\Connectors\\": "src/connectors/"
+    }
+  }
+}

@@ -8,6 +8,11 @@ class VK extends Connector
     const CONNECTOR = 'vk';
     const WALLPOST = 'wallpost';
 
+    /**
+     * Add wallpost task
+     * @param array $post
+     * @throws \Exception
+     */
     public function wallpost($post)
     {
         $post = self::prepare($post, [

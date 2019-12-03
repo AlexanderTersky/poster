@@ -8,6 +8,11 @@ class OK extends Connector
     const CONNECTOR = 'ok';
     const WALLPOST = 'wallpost';
 
+    /**
+     * Add wallpost task
+     * @param array $post
+     * @throws \Exception
+     */
     public function wallpost($post)
     {
         $post = self::prepare($post, [

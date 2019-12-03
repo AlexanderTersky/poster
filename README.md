@@ -79,9 +79,14 @@ $poster->ok()->wallpost([
 ```
 >You must use the full path to your image
 
-#### Export methods
+### Export methods
 
 ```php
 $array = $poster->toArray();
 $json = $poster->toJson();
+```
+
+And you can save the tasks into JSON file
+```php
+$poster->save(__DIR__.'/poster.json');
 ```

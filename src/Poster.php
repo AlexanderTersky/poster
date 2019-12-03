@@ -15,7 +15,11 @@ class Poster
     private $telegram;
     private $ok;
 
-    public function vk(): VK
+    /**
+     * Set VK connector
+     * @return VK
+     */
+    public function vk()
     {
         if (!$this->vk) {
             $this->vk = new VK();
@@ -23,7 +27,11 @@ class Poster
         return $this->vk;
     }
 
-    public function telegram(): Telegram
+    /**
+     * Set Telegram connector
+     * @return Telegram
+     */
+    public function telegram()
     {
         if (!$this->telegram) {
             $this->telegram = new Telegram();
@@ -31,7 +39,11 @@ class Poster
         return $this->telegram;
     }
 
-    public function ok(): OK
+    /**
+     * Set Ok connector
+     * @return OK
+     */
+    public function ok()
     {
         if (!$this->ok) {
             $this->ok = new OK();
@@ -39,7 +51,12 @@ class Poster
         return $this->ok;
     }
 
-    public function toArray(): array
+    /**
+     * Return array of tasks with uuid of tasks pack
+     * @return array
+     * @throws \Exception
+     */
+    public function toArray()
     {
         $output = [];
         try {
@@ -55,8 +72,23 @@ class Poster
         return $output;
     }
 
-    public function toJson(): string
+    /**
+     * Return the JSON string of tasks with uuid of tasks pack
+     * @return string
+     * @throws \Exception
+     */
+    public function toJson()
     {
         return json_encode($this->toArray());
+    }
+
+    /**
+     * Save the JSON string of tasks with uuid of pack into file
+     * @param string $path
+     * @throws \Exception
+     */
+    public function save($path)
+    {
+        file_put_contents($path, $this->toJson());
     }
 }

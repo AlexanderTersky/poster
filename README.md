@@ -1,13 +1,13 @@
 ## Wtolk\Poster
 
-#### Connectors
+### Connectors
 
 * VK
 * Telegram
 * Odnoklassniki
 
 
-#### Usage
+### Usage
  
 ```php
 use Wtolk\Poster\Poster; 
@@ -18,14 +18,14 @@ $poster = new Poster();
 ```
 
 #### VK
-##### Wall Post
+###### Wall Post
 ```php
 $poster->vk()->wallpost([
     'message' => 'Happy New Year',
     'execute_at' => '2020-01-01 00:00:00'
 ]);
 ```
-##### Wall Post with link
+###### Wall Post with link
 ```php
 $poster->vk()->wallpost([
     'message' => 'Happy New Year',
@@ -34,7 +34,7 @@ $poster->vk()->wallpost([
 ]);
 ```
 #### Telegram
-##### Channel Post
+###### Channel Post
 ```php
 $poster->telegram()->channelpost([
     'message' => 'Happy New Year',
@@ -42,7 +42,7 @@ $poster->telegram()->channelpost([
 ]);
 ```
 
-##### Channel Post with link
+###### Channel Post with link
 ```php
 $poster->telegram()->channelpost([
     'message' => 'Happy New Year',
@@ -52,7 +52,7 @@ $poster->telegram()->channelpost([
 ```
 
 #### Odnoklassniki
-##### Group Post
+###### Group Post
 ```php
 $poster->ok()->wallpost([
     'message' => 'Happy New Year',
@@ -60,7 +60,7 @@ $poster->ok()->wallpost([
 ]);
 ```
 
-##### Group Post with link
+###### Group Post with link
 ```php
 $poster->ok()->wallpost([
     'message' => 'Happy New Year',
@@ -69,7 +69,7 @@ $poster->ok()->wallpost([
 ]);
 ```
 
-##### Group Post with image
+###### Group Post with image
 ```php
 $poster->ok()->wallpost([
     'message' => 'Happy New Year',
@@ -77,4 +77,11 @@ $poster->ok()->wallpost([
     'image_url' => 'https://designshop-6aa0.kxcdn.com/photos/send-happy-new-year-photo-cards-online-confetti-15237_90.jpg'
 ]);
 ```
->If must use the full path to your image
+>You must use the full path to your image
+
+#### Export methods
+
+```php
+$array = $poster->toArray();
+$json = $poster->toJson();
+```

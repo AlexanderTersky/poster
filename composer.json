@@ -7,7 +7,7 @@
   "require": {
     "php": ">=5.6",
     "ramsey/uuid": "^3.9",
-    "nesbot/carbon": "^1.39.1",
+    "nesbot/carbon": ">=1.39.1",
     "ext-json": "*"
   },
   "autoload": {

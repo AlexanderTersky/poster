@@ -6,7 +6,7 @@
   "keywords": ["wtolk","webtolk", "poster", "wtolk poster"],
   "require": {
     "php": ">=5.6",
-    "ramsey/uuid": "^3.9",
+    "ramsey/uuid": "^3.8",
     "nesbot/carbon": ">=1.39.1",
     "ext-json": "*"
   },

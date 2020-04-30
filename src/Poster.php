@@ -64,10 +64,10 @@ class Poster
         } catch (UnsatisfiedDependencyException $e) {
             $output['uuid'] = uniqid('', true);
         }
-        $output['tasks'] = array_merge(
-            $this->vk->getTasks(),
-            $this->telegram->getTasks(),
-            $this->ok->getTasks()
+       $output['tasks'] = array_merge(
+          $this->vk ? $this->vk->getTasks()->getTasks() : [],
+          $this->telegram ? $this->telegram->getTasks() : [],
+          $this->ok ? $this->ok->getTasks() : []
         );
         return $output;
     }

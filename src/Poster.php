@@ -65,7 +65,7 @@ class Poster
             $output['uuid'] = uniqid('', true);
         }
        $output['tasks'] = array_merge(
-          $this->vk ? $this->vk->getTasks()->getTasks() : [],
+          $this->vk ? $this->vk->getTasks() : [],
           $this->telegram ? $this->telegram->getTasks() : [],
           $this->ok ? $this->ok->getTasks() : []
         );
